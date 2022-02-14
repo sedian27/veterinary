@@ -1,6 +1,6 @@
 import user from "../models/user.js";
 
-const registerUser = async (req, res) => {
+const register = async (req, res) => {
   const { name, email, password } = req.body;
   if (!name || !email || !password)
     return res.status(400).send({ message: "Incomplete Data" });
@@ -15,4 +15,4 @@ const registerUser = async (req, res) => {
   return res.status(200).send({ result });
 };
 
-export default { registerUser };
+export default { register };
